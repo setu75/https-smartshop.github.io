@@ -3,81 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My E-commerce Store</title> <!-- Change title for each page -->
-    <!-- Bootstrap CSS
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">-->
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <!-- <img src="images/logo.png" alt="MyStore Logo"> You can add a logo image here -->
-                MyStore
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="products.html">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cart.html">Cart <span class="badge bg-primary rounded-pill">0</span></a> <!-- Placeholder for cart count -->
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <!-- Optional: User Account Link -->
-                    <!--
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAccount" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Account
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownAccount">
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li><a class="dropdown-item" href="#">Orders</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
-                        </ul>
-                    </li>
-                    -->
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main Content Area (This will change for each page) -->
-    <!-- CONTENT GOES HERE -->
-
-    <!-- Bootstrap JS Bundle (Popper.js included) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="js/script.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout | MyStore</title>
-   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Navigation Bar (copy from common structure) -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">MyStore</a>
@@ -96,12 +27,10 @@
         </div>
     </nav>
 
-    <!-- Main Content Area -->
     <main class="container mt-5">
         <h1 class="mb-4">Checkout</h1>
 
         <div class="row">
-            <!-- Shipping/Billing Information -->
             <div class="col-md-7">
                 <form id="checkoutForm">
                     <h4 class="mb-3">Shipping Address</h4>
@@ -148,9 +77,7 @@
                             <input type="text" class="form-control" id="zip" placeholder="" required>
                         </div>
                     </div>
-
                     <hr class="my-4">
-
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="same-address">
                         <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
@@ -159,9 +86,7 @@
                         <input type="checkbox" class="form-check-input" id="save-info">
                         <label class="form-check-label" for="save-info">Save this information for next time</label>
                     </div>
-
                     <hr class="my-4">
-
                     <h4 class="mb-3">Payment</h4>
                     <div class="my-3">
                         <div class="form-check">
@@ -201,24 +126,22 @@
                 </form>
             </div>
 
-            <!-- Order Summary -->
             <div class="col-md-5">
                 <h4 class="d-flex justify-content-between align-items-center mb-3">
                     <span class="text-primary">Your cart</span>
-                    <span class="badge bg-primary rounded-pill">2</span> <!-- Match cart items -->
-                </h4>
+                    <span class="badge bg-primary rounded-pill">2</span> </h4>
                 <ul class="list-group mb-3">
                     <li class="list-group-item d-flex justify-content-between lh-sm">
                         <div>
                             <h6 class="my-0">Awesome Gadget</h6>
-                            <small class="text-muted">Quantity: 1</small>
+                            <small class="text-muted">Brief description</small>
                         </div>
                         <span class="text-muted">$99.99</span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between lh-sm">
                         <div>
                             <h6 class="my-0">Stylish Wearable</h6>
-                            <small class="text-muted">Quantity: 1</small>
+                            <small class="text-muted">Brief description</small>
                         </div>
                         <span class="text-muted">$149.50</span>
                     </li>
@@ -244,7 +167,6 @@
         </div>
     </main>
 
-    <!-- Footer (copy from common structure) -->
     <footer class="footer bg-light py-4 mt-auto">
         <div class="container text-center">
             <p>© 2023 My E-commerce Store. All Rights Reserved.</p>
@@ -252,7 +174,7 @@
         </div>
     </footer>
 
-    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
