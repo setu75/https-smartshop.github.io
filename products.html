@@ -3,82 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My E-commerce Store</title> <!-- Change title for each page -->
-    <!-- Bootstrap CSS 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">-->
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <!-- <img src="images/logo.png" alt="MyStore Logo"> You can add a logo image here -->
-                MyStore
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="products.html">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cart.html">Cart <span class="badge bg-primary rounded-pill">0</span></a> <!-- Placeholder for cart count -->
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <!-- Optional: User Account Link -->
-                    <!--
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAccount" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Account
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownAccount">
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li><a class="dropdown-item" href="#">Orders</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
-                        </ul>
-                    </li>
-                    -->
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main Content Area (This will change for each page) -->
-    <!-- CONTENT GOES HERE -->
-
-
-    <!-- Bootstrap JS Bundle (Popper.js included) 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>-->
-    <!-- Custom JS -->
-    <script src="js/script.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Products | MyStore</title>
-    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Navigation Bar (copy from common structure) -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">MyStore</a>
@@ -97,11 +27,9 @@
         </div>
     </nav>
 
-    <!-- Main Content Area -->
     <main class="container mt-5">
         <h1 class="mb-4">Our Products</h1>
 
-        <!-- Filters (Visual Placeholder) -->
         <div class="row mb-4">
             <div class="col-md-3">
                 <select class="form-select">
@@ -121,9 +49,7 @@
             </div>
         </div>
 
-        <!-- Product Grid -->
         <div class="row">
-            <!-- Product Card 1 -->
             <div class="col-md-4 col-lg-3">
                 <div class="card product-card">
                     <img src="images/product1.jpg" class="card-img-top" alt="Product 1">
@@ -136,52 +62,44 @@
                     </div>
                 </div>
             </div>
-            <!-- Product Card 2 -->
             <div class="col-md-4 col-lg-3">
                 <div class="card product-card">
-                    <div class="img-placeholder">Product 2</div>
-                    <!-- <img src="images/product2.jpg" class="card-img-top" alt="Product 2"> -->
+                    <img src="images/product2.jpg" class="card-img-top" alt="Product 2">
                     <div class="card-body">
                         <h5 class="card-title">Stylish Wearable</h5>
-                        <p class="card-text">Short description.</p>
+                        <p class="card-text">Brief description of the product.</p>
                         <p class="card-text"><strong>$149.50</strong></p>
                         <a href="product-detail.html?id=2" class="btn btn-outline-secondary btn-sm">View Details</a>
                         <button class="btn btn-primary btn-sm add-to-cart-btn" data-product-id="2" data-product-name="Stylish Wearable">Add to Cart</button>
                     </div>
                 </div>
             </div>
-            <!-- Product Card 3 -->
             <div class="col-md-4 col-lg-3">
                 <div class="card product-card">
-                    <div class="img-placeholder">Product 3</div>
-                    <!-- <img src="images/product3.jpg" class="card-img-top" alt="Product 3"> -->
+                    <img src="images/product3.jpg" class="card-img-top" alt="Product 3">
                     <div class="card-body">
-                        <h5 class="card-title">Home Essential</h5>
-                        <p class="card-text">Short description.</p>
-                        <p class="card-text"><strong>$49.00</strong></p>
+                        <h5 class="card-title">Home Decor Item</h5>
+                        <p class="card-text">This is a wonderful item for your home.</p>
+                        <p class="card-text"><strong>$25.00</strong></p>
                         <a href="product-detail.html?id=3" class="btn btn-outline-secondary btn-sm">View Details</a>
-                        <button class="btn btn-primary btn-sm add-to-cart-btn" data-product-id="3" data-product-name="Home Essential">Add to Cart</button>
+                        <button class="btn btn-primary btn-sm add-to-cart-btn" data-product-id="3" data-product-name="Home Decor Item">Add to Cart</button>
                     </div>
                 </div>
             </div>
-            <!-- Product Card 4 -->
             <div class="col-md-4 col-lg-3">
                 <div class="card product-card">
-                    <div class="img-placeholder">Product 4</div>
-                    <!-- <img src="images/product4.jpg" class="card-img-top" alt="Product 4"> -->
+                    <img src="images/product4.jpg" class="card-img-top" alt="Product 4">
                     <div class="card-body">
                         <h5 class="card-title">Outdoor Gear</h5>
-                        <p class="card-text">Short description.</p>
+                        <p class="card-text">Perfect for adventures.</p>
                         <p class="card-text"><strong>$75.00</strong></p>
                         <a href="product-detail.html?id=4" class="btn btn-outline-secondary btn-sm">View Details</a>
                         <button class="btn btn-primary btn-sm add-to-cart-btn" data-product-id="4" data-product-name="Outdoor Gear">Add to Cart</button>
                     </div>
                 </div>
             </div>
-            <!-- Add more product cards as needed -->
-        </div>
+            </div>
 
-        <!-- Pagination (Visual Placeholder) -->
         <nav aria-label="Page navigation example" class="mt-5">
             <ul class="pagination justify-content-center">
                 <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
@@ -193,7 +111,6 @@
         </nav>
     </main>
 
-    <!-- Footer (copy from common structure) -->
     <footer class="footer bg-light py-4 mt-auto">
         <div class="container text-center">
             <p>© 2023 My E-commerce Store. All Rights Reserved.</p>
@@ -201,7 +118,7 @@
         </div>
     </footer>
 
-    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
