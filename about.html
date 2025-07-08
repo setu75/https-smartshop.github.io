@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My E-commerce Store</title> <!-- Change title for each page -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <!-- <img src="images/logo.png" alt="MyStore Logo"> You can add a logo image here -->
+                MyStore
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Cart <span class="badge bg-primary rounded-pill">0</span></a> <!-- Placeholder for cart count -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <!-- Optional: User Account Link -->
+                    <!--
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAccount" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Account
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownAccount">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Orders</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                    -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area (This will change for each page) -->
+    <!-- CONTENT GOES HERE -->
+
+    <!-- Bootstrap JS Bundle (Popper.js included) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | MyStore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar (copy from common structure) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MyStore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart <span class="badge bg-primary rounded-pill">0</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="container mt-5">
+        <div class="py-5 text-center">
+            <h1>About MyStore</h1>
+            <p class="lead">We are passionate about bringing you the best products with exceptional customer service.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Our Story</h2>
+                <p>MyStore started in [Year] with a simple idea: to create an online shopping experience that is easy, enjoyable, and trustworthy. We noticed a gap in the market for [Your Niche/Unique Selling Proposition] and decided to build a platform that caters to customers looking for quality and value.</p>
+                <p>Over the years, we've grown from a small passion project into a thriving online business, serving thousands of happy customers. Our commitment to sourcing high-quality products and providing top-notch support remains our core focus.</p>
+            </div>
+            <div class="col-md-6">
+                <h2>Our Mission</h2>
+                <p>Our mission is to provide a curated selection of [Product Types] that enhance our customers' lives. We aim to achieve this by:</p>
+                <ul>
+                    <li>Offering a diverse range of high-quality products.</li>
+                    <li>Ensuring a seamless and secure shopping experience.</li>
+                    <li>Providing responsive and helpful customer support.</li>
+                    <li>Continuously innovating and improving our services.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <h2 class="text-center mb-4">Meet Our (Placeholder) Team</h2>
+            <div class="col-lg-4 text-center">
+                <div class="img-placeholder rounded-circle mx-auto" style="width: 140px; height: 140px; line-height:140px;">CEO</div>
+                <!-- <img class="rounded-circle" src="images/team-member1.jpg" alt="Team Member 1" width="140" height="140"> -->
+                <h3 class="fw-normal mt-2">Jane Doe</h3>
+                <p>Founder & CEO</p>
+            </div>
+            <div class="col-lg-4 text-center">
+                 <div class="img-placeholder rounded-circle mx-auto" style="width: 140px; height: 140px; line-height:140px;">COO</div>
+                <!-- <img class="rounded-circle" src="images/team-member2.jpg" alt="Team Member 2" width="140" height="140"> -->
+                <h3 class="fw-normal mt-2">John Smith</h3>
+                <p>Chief Operations Officer</p>
+            </div>
+            <div class="col-lg-4 text-center">
+                 <div class="img-placeholder rounded-circle mx-auto" style="width: 140px; height: 140px; line-height:140px;">CMO</div>
+                <!-- <img class="rounded-circle" src="images/team-member3.jpg" alt="Team Member 3" width="140" height="140"> -->
+                <h3 class="fw-normal mt-2">Alice Brown</h3>
+                <p>Marketing Director</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (copy from common structure) -->
+    <footer class="footer bg-light py-4 mt-auto">
+        <div class="container text-center">
+            <p>© 2023 My E-commerce Store. All Rights Reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

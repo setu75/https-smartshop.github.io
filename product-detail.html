@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My E-commerce Store</title> <!-- Change title for each page -->
+    <!-- Bootstrap CSS 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">-->
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <!-- <img src="images/logo.png" alt="MyStore Logo"> You can add a logo image here -->
+                MyStore
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Cart <span class="badge bg-primary rounded-pill">0</span></a> <!-- Placeholder for cart count -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <!-- Optional: User Account Link -->
+                    <!--
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAccount" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Account
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownAccount">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Orders</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                    -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area (This will change for each page) -->
+    <!-- CONTENT GOES HERE -->
+
+
+    <!-- Bootstrap JS Bundle (Popper.js included)
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>-->
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Name | MyStore</title> <!-- Update with actual product name -->
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar (copy from common structure) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MyStore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart <span class="badge bg-primary rounded-pill">0</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="container mt-5">
+        <!-- Product Details -->
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Placeholder for product image. Replace with <img> tag -->
+                <div class="product-detail-img-placeholder mb-3">Main Product Image Here</div>
+                <!-- Example with actual image:
+                <img src="images/product1-large.jpg" alt="Product Name" class="product-detail-img mb-3">
+                -->
+                <!-- Optional: Thumbnail gallery for more images -->
+                <div class="row">
+                    <div class="col-3"><div class="product-detail-img-placeholder" style="height:80px; font-size:0.8rem;">Thumb 1</div></div>
+                    <div class="col-3"><div class="product-detail-img-placeholder" style="height:80px; font-size:0.8rem;">Thumb 2</div></div>
+                    <div class="col-3"><div class="product-detail-img-placeholder" style="height:80px; font-size:0.8rem;">Thumb 3</div></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h1 id="productName">Awesome Gadget</h1> <!-- Will be dynamically set or hardcoded -->
+                <p class="lead" id="productPrice">$99.99</p>
+                <p id="productDescription">
+                    This is a detailed description of the Awesome Gadget. It's designed to make your life
+                    easier and more enjoyable. With its sleek design and powerful features,
+                    it's a must-have for tech enthusiasts. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit.
+                </p>
+                <hr>
+                <div class="mb-3">
+                    <label for="quantity" class="form-label">Quantity:</label>
+                    <input type="number" id="quantity" class="form-control" value="1" min="1" style="width: 80px;">
+                </div>
+                <button class="btn btn-primary btn-lg add-to-cart-btn" data-product-id="1" data-product-name="Awesome Gadget">
+                    Add to Cart
+                </button>
+
+                <!-- Product Specs/Features (Optional) -->
+                <div class="mt-4">
+                    <h5>Features:</h5>
+                    <ul>
+                        <li>Feature 1: High-quality materials</li>
+                        <li>Feature 2: Long battery life</li>
+                        <li>Feature 3: Easy to use</li>
+                        <li>Feature 4: Multiple color options</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Products (Optional) -->
+        <section class="mt-5">
+            <h3 class="mb-3">You Might Also Like</h3>
+            <div class="row">
+                <!-- Related Product Card 1 -->
+                <div class="col-md-3">
+                    <div class="card product-card">
+                        <div class="img-placeholder">Related Product 1</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Similar Item A</h5>
+                            <p class="card-text">$89.00</p>
+                            <a href="product-detail.html?id=5" class="btn btn-outline-secondary btn-sm">View</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Related Product Card 2 -->
+                <div class="col-md-3">
+                    <div class="card product-card">
+                        <div class="img-placeholder">Related Product 2</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Similar Item B</h5>
+                            <p class="card-text">$119.00</p>
+                            <a href="product-detail.html?id=6" class="btn btn-outline-secondary btn-sm">View</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more related products -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (copy from common structure) -->
+    <footer class="footer bg-light py-4 mt-auto">
+        <div class="container text-center">
+            <p>© 2023 My E-commerce Store. All Rights Reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>-->
+    <script src="js/script.js"></script>
+    <script>
+        // Basic script to fetch product ID from URL and update page (very simplified)
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const productId = params.get('id');
+
+            // In a real app, you'd fetch product details from a server/database based on productId
+            // For this demo, we'll just update the name if an ID is present
+            const productData = {
+                "1": { name: "Awesome Gadget", price: "$99.99", description: "A truly awesome gadget for your daily needs. Sleek, powerful, and essential.", image: "images/placeholder-product.jpg" },
+                "2": { name: "Stylish Wearable", price: "$149.50", description: "Look cool and stay connected with this stylish wearable device.", image: "images/placeholder-product.jpg" },
+                "3": { name: "Home Essential", price: "$49.00", description: "Make your home life easier and more organized with this essential item.", image: "images/placeholder-product.jpg" },
+                // Add more product data as needed
+            };
+
+            if (productId && productData[productId]) {
+                document.getElementById('productName').textContent = productData[productId].name;
+                document.getElementById('productPrice').textContent = productData[productId].price;
+                document.getElementById('productDescription').textContent = productData[productId].description;
+                document.title = productData[productId].name + " | MyStore";
+
+                // Update "Add to Cart" button data
+                const addToCartBtn = document.querySelector('.add-to-cart-btn');
+                if(addToCartBtn){
+                    addToCartBtn.dataset.productId = productId;
+                    addToCartBtn.dataset.productName = productData[productId].name;
+                }
+                // You could also update the main image src here
+                // document.querySelector('.product-detail-img').src = productData[productId].image;
+            } else if (productId) {
+                document.getElementById('productName').textContent = "Product Not Found";
+                document.getElementById('productPrice').textContent = "";
+                document.getElementById('productDescription').textContent = "The product you are looking for does not exist or is currently unavailable.";
+            }
+        });
+    </script>
+</body>
+</html>

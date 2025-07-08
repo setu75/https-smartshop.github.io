@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My E-commerce Store</title> <!-- Change title for each page -->
+    <!-- Bootstrap CSS 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">-->
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <!-- <img src="images/logo.png" alt="MyStore Logo"> You can add a logo image here -->
+                MyStore
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Cart <span class="badge bg-primary rounded-pill">0</span></a> <!-- Placeholder for cart count -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <!-- Optional: User Account Link -->
+                    <!--
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAccount" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Account
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownAccount">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Orders</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                    -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area (This will change for each page) -->
+    <!-- CONTENT GOES HERE -->
+
+    <!-- Bootstrap JS Bundle (Popper.js included) 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>-->
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Shopping Cart | MyStore</title>
+   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar (copy from common structure) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MyStore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="cart.html">Cart <span class="badge bg-primary rounded-pill">2</span></a></li> <!-- Example: 2 items -->
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="container mt-5">
+        <h1 class="mb-4">Your Shopping Cart</h1>
+
+        <div id="cartItemsContainer">
+            <!-- Cart items will be dynamically inserted here by JavaScript in a real app -->
+            <!-- Static example for now: -->
+            <div class="card mb-3 cart-item">
+                <div class="row g-0">
+                    <div class="col-md-2 d-flex align-items-center justify-content-center">
+                        <div class="img-placeholder" style="width:80px; height:80px; font-size:0.8rem;">Prod Img</div>
+                        <!-- <img src="images/product1-thumb.jpg" class="img-fluid rounded-start" alt="Product 1"> -->
+                    </div>
+                    <div class="col-md-5">
+                        <div class="card-body">
+                            <h5 class="card-title">Awesome Gadget</h5>
+                            <p class="card-text"><small class="text-muted">ID: 1</small></p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 d-flex align-items-center">
+                        <input type="number" class="form-control form-control-sm" value="1" min="1" style="width: 70px;">
+                    </div>
+                    <div class="col-md-2 d-flex align-items-center">
+                        <p class="card-text mb-0"><strong>$99.99</strong></p>
+                    </div>
+                    <div class="col-md-1 d-flex align-items-center">
+                        <button class="btn btn-sm btn-danger">X</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3 cart-item">
+                <div class="row g-0">
+                    <div class="col-md-2 d-flex align-items-center justify-content-center">
+                         <div class="img-placeholder" style="width:80px; height:80px; font-size:0.8rem;">Prod Img</div>
+                        <!-- <img src="images/product2-thumb.jpg" class="img-fluid rounded-start" alt="Product 2"> -->
+                    </div>
+                    <div class="col-md-5">
+                        <div class="card-body">
+                            <h5 class="card-title">Stylish Wearable</h5>
+                            <p class="card-text"><small class="text-muted">ID: 2</small></p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 d-flex align-items-center">
+                        <input type="number" class="form-control form-control-sm" value="1" min="1" style="width: 70px;">
+                    </div>
+                    <div class="col-md-2 d-flex align-items-center">
+                        <p class="card-text mb-0"><strong>$149.50</strong></p>
+                    </div>
+                    <div class="col-md-1 d-flex align-items-center">
+                        <button class="btn btn-sm btn-danger">X</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Summary -->
+        <div class="row mt-4">
+            <div class="col-md-8">
+                <a href="products.html" class="btn btn-outline-secondary">Continue Shopping</a>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Cart Summary</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Subtotal
+                                <span>$249.49</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Shipping
+                                <span>$5.00</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <strong>Total</strong>
+                                <strong>$254.49</strong>
+                            </li>
+                        </ul>
+                        <a href="checkout.html" class="btn btn-primary w-100 mt-3">Proceed to Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="emptyCartMessage" class="text-center mt-4" style="display:none;">
+            <h3>Your cart is empty.</h3>
+            <a href="products.html" class="btn btn-primary">Shop Products</a>
+        </div>
+    </main>
+
+    <!-- Footer (copy from common structure) -->
+    <footer class="footer bg-light py-4 mt-auto">
+        <div class="container text-center">
+            <p>© 2023 My E-commerce Store. All Rights Reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>-->
+    <script src="js/script.js"></script>
+    <script>
+        // Basic script to simulate cart (no actual data storage)
+        document.addEventListener('DOMContentLoaded', function() {
+            // This is where you would typically load cart data from localStorage or a server
+            // For now, we'll just check if there are items.
+            const cartItemsContainer = document.getElementById('cartItemsContainer');
+            const emptyCartMessage = document.getElementById('emptyCartMessage');
+            const cartSummary = document.querySelector('.row.mt-4'); // The summary and checkout button row
+
+            // Simulate an empty cart by default, or remove items if you want to test "empty" state
+            const hasItems = cartItemsContainer.children.length > 0;
+
+            if (!hasItems) {
+                cartItemsContainer.style.display = 'none';
+                if(cartSummary) cartSummary.style.display = 'none';
+                if(emptyCartMessage) emptyCartMessage.style.display = 'block';
+                // Update cart badge in navbar
+                const cartBadge = document.querySelector('.navbar .badge');
+                if(cartBadge) cartBadge.textContent = '0';
+            } else {
+                // Update cart badge in navbar (example: based on number of static items)
+                const cartBadge = document.querySelector('.navbar .badge');
+                if(cartBadge) cartBadge.textContent = cartItemsContainer.children.length;
+            }
+
+            // Add event listeners to remove buttons (if they existed dynamically)
+            // For static items, this would be part of the main script.js or here
+            const removeButtons = cartItemsContainer.querySelectorAll('.btn-danger');
+            removeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    this.closest('.cart-item').remove();
+                    // Recalculate totals and update UI (not implemented in this static example)
+                    alert("Item removed (placeholder - cart totals not updated)");
+                    // Check again if cart is empty after removal
+                    if (cartItemsContainer.children.length === 0) {
+                        cartItemsContainer.style.display = 'none';
+                        if(cartSummary) cartSummary.style.display = 'none';
+                        if(emptyCartMessage) emptyCartMessage.style.display = 'block';
+                        const cartBadge = document.querySelector('.navbar .badge');
+                        if(cartBadge) cartBadge.textContent = '0';
+                    } else {
+                        const cartBadge = document.querySelector('.navbar .badge');
+                        if(cartBadge) cartBadge.textContent = cartItemsContainer.children.length;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

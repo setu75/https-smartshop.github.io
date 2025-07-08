@@ -1,0 +1,887 @@
+/* style.css - Further Modernized and Beautified with Navbar & Hero Slider & Product Hover (CSS-Only) */
+
+/* Reset and Base Styles */
+:root {
+    --primary-color: #4A90E2; /* Vibrant, friendly blue */
+    --primary-color-darker: #3A7BBF; /* Darker shade for hovers */
+    --primary-color-rgb: 74, 144, 226; /* For rgba() shadows */
+
+    --secondary-color: #6a737d; /* Soft secondary text color */
+    --accent-color: #FF5C5C; /* Warm accent for highlights */
+    --accent-color-darker: #E04C4C; /* Darker accent */
+
+    --success-color: #4CAF50;
+    --success-color-darker: #388E3C;
+    --success-color-rgb: 76, 175, 80;
+    --info-color: #2196F3;
+    --warning-color: #FFC107;
+    --danger-color: #F44336;
+
+    --light-bg: #f8f9fa; /* Slightly warmer light background */
+    --medium-bg: #e9ecef; /* For subtle contrasts */
+    --white-text: #ffffff;
+    --white-rgb: 255, 255, 255;
+
+    --dark-text: #212529;
+    --light-text: #6c757d;
+
+
+    --border-color: #dee2e6; /* Softer border */
+    --border-color-light: #f1f3f5;
+
+    --header-font: 'Poppins', sans-serif;
+    --body-font: 'Open Sans', sans-serif;
+
+    --box-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+    --box-shadow-sm: 0 3px 6px rgba(0, 0, 0, 0.06);
+    --box-shadow-md: 0 6px 12px rgba(0, 0, 0, 0.08);
+    --box-shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.1);
+    --box-shadow-xl: 0 15px 30px rgba(0, 0, 0, 0.12);
+
+    --border-radius-sm: 0.25rem;
+    --border-radius-md: 0.35rem; /* Original default */
+    --border-radius-lg: 0.75rem;
+    --border-radius-xl: 1rem;
+    --border-radius-pill: 50rem;
+
+    --transition-fast: all 0.2s ease-in-out;
+    --transition-normal: all 0.3s ease-in-out;
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    line-height: 1.7;
+    color: var(--dark-text);
+    background: linear-gradient(135deg, #f5f7fa, #e9edf1); /* Subtle, elegant gradient */
+    min-height: 100vh;
+    background-attachment: fixed; /* Can be performance intensive on mobile */
+    padding-top: 100px; /* Adjust for fixed navbar height - original was 70px */
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--header-font);
+    margin-bottom: 1.2rem; /* Consistent margin */
+    line-height: 1.3;
+    color: var(--dark-text);
+    font-weight: 700;
+}
+
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+a:hover {
+    color: var(--primary-color-darker);
+    text-decoration: none; /* Underline handled by nav-link or globally if desired */
+    transform: translateY(-1px); /* Subtle lift on hover */
+}
+
+/* Layout Utilities */
+.container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+[class*="col-"] {
+    padding: 0 15px;
+}
+
+/* Column widths - keeping Bootstrap-like structure */
+.col-1 { width: 8.33%; } .col-2 { width: 16.66%; } .col-3 { width: 25%; }
+.col-4 { width: 33.33%; } .col-5 { width: 41.66%; } .col-6 { width: 50%; }
+.col-7 { width: 58.33%; } .col-8 { width: 66.66%; } .col-9 { width: 75%; }
+.col-10 { width: 83.33%; } .col-11 { width: 91.66%; } .col-12 { width: 100%; }
+
+@media (min-width: 576px) {
+    .col-sm-1 { width: 8.33%; } .col-sm-2 { width: 16.66%; } .col-sm-3 { width: 25%; }
+    .col-sm-4 { width: 33.33%; } .col-sm-5 { width: 41.66%; } .col-sm-6 { width: 50%; }
+    .col-sm-7 { width: 58.33%; } .col-sm-8 { width: 66.66%; } .col-sm-9 { width: 75%; }
+    .col-sm-10 { width: 83.33%; } .col-sm-11 { width: 91.66%; } .col-sm-12 { width: 100%; }
+}
+
+@media (min-width: 768px) {
+    .col-md-1 { width: 8.33%; } .col-md-2 { width: 16.66%; } .col-md-3 { width: 25%; }
+    .col-md-4 { width: 33.33%; } .col-md-5 { width: 41.66%; } .col-md-6 { width: 50%; }
+    .col-md-7 { width: 58.33%; } .col-md-8 { width: 66.66%; } .col-md-9 { width: 75%; }
+    .col-md-10 { width: 83.33%; } .col-md-11 { width: 91.66%; } .col-md-12 { width: 100%; }
+}
+
+@media (min-width: 992px) {
+    .col-lg-1 { width: 8.33%; } .col-lg-2 { width: 16.66%; } .col-lg-3 { width: 25%; }
+    .col-lg-4 { width: 33.33%; } .col-lg-5 { width: 41.66%; } .col-lg-6 { width: 50%; }
+    .col-lg-7 { width: 58.33%; } .col-lg-8 { width: 66.66%; } .col-lg-9 { width: 75%; }
+    .col-lg-10 { width: 83.33%; } .col-lg-11 { width: 91.66%; } .col-lg-12 { width: 100%; }
+}
+
+@media (min-width: 1200px) {
+    .col-xl-1 { width: 8.33%; } .col-xl-2 { width: 16.66%; } .col-xl-3 { width: 25%; }
+    .col-xl-4 { width: 33.33%; } .col-xl-5 { width: 41.66%; } .col-xl-6 { width: 50%; }
+    .col-xl-7 { width: 58.33%; } .col-xl-8 { width: 66.66%; } .col-xl-9 { width: 75%; }
+    .col-xl-10 { width: 83.33%; } .col-xl-11 { width: 91.66%; } .col-xl-12 { width: 100%; }
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.d-block { display: block; }
+.d-flex { display: flex; }
+.justify-content-center { justify-content: center; }
+.align-items-center { align-items: center; }
+.w-100 { width: 100%; }
+.mb-3 { margin-bottom: 1rem; }
+.mt-3 { margin-top: 1rem; }
+.py-4 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.p-3 { padding: 1rem; }
+.rounded { border-radius: var(--border-radius-md); } /* Use variable */
+.shadow-sm { box-shadow: var(--box-shadow-sm); } /* Use variable */
+.shadow { box-shadow: var(--box-shadow-md); } /* Use variable */
+.mb-5 { margin-bottom: 3rem; }
+.me-2 { margin-right: 0.5rem; }
+.fw-normal { font-weight: 400; }
+.mt-2 { margin-top: 0.5rem; }
+
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px);
+    padding: 0.85rem 0; /* Adjusted padding */
+    box-shadow: var(--box-shadow-md);
+    z-index: 1030;
+    transition: background-color var(--transition-normal), box-shadow var(--transition-normal), padding var(--transition-normal);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-family: var(--header-font);
+    font-weight: 700;
+    font-size: 1.9rem; /* Adjusted brand size */
+    color: var(--dark-text);
+    text-decoration: none;
+    padding: 0.5rem 0;
+    transition: color var(--transition-fast);
+}
+
+.navbar-brand:hover {
+    color: var(--primary-color);
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+    margin-left: 1.8rem; /* Increased spacing */
+}
+
+.nav-link {
+    padding: 0.7rem 1.3rem;
+    color: var(--dark-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+    border-radius: var(--border-radius-md);
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Position slightly below the link */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px; /* Thinner, elegant underline */
+    background-color: var(--primary-color);
+    transition: width var(--transition-normal) ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+    background-color: rgba(var(--primary-color-rgb), 0.07);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: calc(100% - 2.0rem); /* Adjust width based on padding */
+}
+
+.nav-link.active {
+    color: var(--primary-color);
+    font-weight: 600; /* Bolder active link */
+    background-color: rgba(var(--primary-color-rgb), 0.12);
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+    padding: 0.35rem 0.85rem;
+    font-size: 1.3rem;
+    line-height: 1;
+    border-radius: var(--border-radius-md);
+    transition: all var(--transition-fast);
+    color: var(--dark-text);
+    display: none;
+}
+
+.navbar-toggler:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-color-rgb), 0.25); /* Softer focus */
+}
+
+@media (max-width: 768px) {
+    .navbar-toggler { display: block; }
+    .navbar-collapse {
+        flex-grow: 0; width: 100%; text-align: right;
+    }
+    .navbar-nav {
+        flex-direction: column; width: 100%; margin-left: 0;
+        align-items: flex-end; padding-top: 1rem;
+    }
+    .nav-item { margin: 0.5rem 0; width: auto; text-align: right; } /* Ensure item not full width */
+    .nav-link { width: auto; margin-left: auto; display: inline-block; padding: 0.6rem 1rem;}
+    .nav-link::after { bottom: 0; }
+    .nav-link:hover::after, .nav-link.active::after { width: calc(100% - 1.0rem); }
+
+}
+
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    line-height: 1.6;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.75rem 1.75rem; /* Generous padding */
+    font-size: 1rem;
+    border-radius: var(--border-radius-pill); /* Modern pill shape */
+    transition: all var(--transition-normal) ease;
+    letter-spacing: 0.3px; /* Subtle letter spacing */
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.03); /* Lift and slight scale effect */
+    box-shadow: var(--box-shadow-lg);
+}
+
+.btn-primary {
+    color: var(--white-text);
+    background-image: linear-gradient(45deg, var(--primary-color) 0%, var(--primary-color-darker) 100%);
+    border: none;
+    box-shadow: var(--box-shadow-md) rgba(var(--primary-color-rgb), 0.25);
+}
+
+.btn-primary:hover {
+    background-image: linear-gradient(45deg, var(--primary-color-darker) 0%, var(--primary-color) 100%); /* Shift gradient */
+    box-shadow: var(--box-shadow-lg) rgba(var(--primary-color-rgb), 0.35);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color); /* Thicker border for outline */
+}
+
+.btn-outline-primary:hover {
+    color: var(--white-text);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: var(--box-shadow-sm) rgba(var(--primary-color-rgb), 0.2);
+}
+
+.btn-success {
+    color: var(--white-text);
+    background-image: linear-gradient(45deg, var(--success-color) 0%, var(--success-color-darker) 100%);
+    border: none;
+    box-shadow: var(--box-shadow-md) rgba(var(--success-color-rgb), 0.25);
+}
+
+.btn-success:hover {
+    background-image: linear-gradient(45deg, var(--success-color-darker) 0%, var(--success-color) 100%);
+    border-color: var(--success-color-darker);
+    box-shadow: var(--box-shadow-lg) rgba(var(--success-color-rgb), 0.35);
+}
+
+.btn-outline-dark {
+    color: var(--dark-text);
+    border: 2px solid var(--dark-text);
+}
+
+.btn-outline-dark:hover {
+    color: var(--white-text);
+    background-color: var(--dark-text);
+    border-color: var(--dark-text);
+    box-shadow: var(--box-shadow-sm) rgba(0,0,0, 0.2);
+}
+
+/* Forms */
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1.15rem; /* Adjusted padding */
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--dark-text);
+    background-color: var(--white-text);
+    background-clip: padding-box;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-control:focus {
+    color: var(--dark-text);
+    background-color: var(--white-text);
+    border-color: var(--primary-color);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(var(--primary-color-rgb), 0.15), var(--box-shadow-xs); /* More subtle focus */
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+
+.input-group > .form-control {
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+}
+
+.input-group > .form-control:focus {
+    z-index: 3;
+}
+
+/* Cards */
+.card {
+    background-color: var(--white-text);
+    border: none;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow-md);
+    padding: 2.2rem;
+    margin-bottom: 2.5rem;
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.015); /* Enhanced lift and scale */
+    box-shadow: var(--box-shadow-xl);
+}
+
+.card-title {
+    font-family: var(--header-font);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--dark-text);
+}
+
+.card-text {
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+/* Product Specific Styles */
+.product-card {
+    text-align: center;
+    /* Inherits .card styles for base shadow, padding, border-radius, and hover lift */
+    /* padding: 1.8rem; original, now uses card padding or can be overridden */
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card img { /* The main, visible image */
+    max-width: 100%;
+    height: 220px; /* Example fixed height, adjust as needed */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    border-radius: var(--border-radius-md); /* Slightly less than card for inset look */
+    margin-bottom: 1.2rem;
+    transition: opacity 0.35s ease-out, transform 0.4s var(--transition-smooth);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-card:hover img { /* Main image behavior when CARD is hovered */
+    opacity: 0;
+    transform: scale(0.90) rotate(-3deg); /* Image shrinks and slightly rotates out */
+}
+
+.product-card .card-body { /* Ensure text content is above the ::after pseudo-element */
+    position: relative;
+    z-index: 1;
+    padding: 1rem; /* Custom padding for product card body if needed */
+}
+
+.product-card::after { /* The "other" image, styled as card's dynamic background */
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transform: scale(1.2) rotate(6deg); /* Start larger and rotated for a dynamic entry */
+    transition: opacity 0.4s var(--transition-smooth), transform 0.4s var(--transition-smooth);
+    border-radius: var(--border-radius-lg); /* Match card's border-radius */
+    z-index: 0; /* Sits behind .card-body */
+    background-image: url('images/placeholder-product-hover.jpg'); /* IMPORTANT: Replace with your actual hover image path */
+}
+
+.product-card:hover::after {
+    opacity: 1;
+    transform: scale(1) rotate(0deg); /* Scales to normal and straightens */
+}
+
+.product-price {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-top: 0.7rem;
+    margin-bottom: 1.2rem;
+}
+
+.product-detail-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow-lg);
+}
+
+.cta-section h3 {
+    color: var(--white-text); /* Explicitly set for override */
+    margin-bottom: 1.5rem; /* Increased margin */
+    font-size: 2.8rem; /* Larger CTA heading */
+    font-weight: 700;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.25);
+}
+
+.cta-section p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem; /* Increased margin */
+    opacity: 0.95;
+}
+
+.cta-section .form-control {
+    max-width: 450px;
+    margin: 0 auto 1.5rem auto;
+    border: 1px solid rgba(var(--white-rgb),0.4);
+    background-color: rgba(var(--white-rgb), 0.15); /* More transparent input */
+    color: var(--white-text);
+    border-radius: var(--border-radius-pill); /* Pill shape */
+}
+
+.cta-section .form-control::placeholder {
+    color: rgba(var(--white-rgb), 0.7);
+    opacity: 1; /* Ensure opacity is controlled by color alpha */
+}
+.cta-section .form-control:focus {
+    background-color: rgba(var(--white-rgb), 0.2);
+    border-color: rgba(var(--white-rgb), 0.8);
+    color: var(--white-text);
+    box-shadow: 0 0 0 0.2rem rgba(var(--white-rgb), 0.25);
+}
+
+/* Categories Section */
+.category-btn {
+    padding: 1.8rem 1.2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: var(--border-radius-lg);
+    transition: all var(--transition-normal) ease;
+    background-color: var(--white-text);
+    border: 1px solid var(--border-color-light);
+    box-shadow: var(--box-shadow-sm);
+    color: var(--dark-text);
+    display: block; /* Ensure it takes full width of its col */
+    margin-bottom: 1rem; /* Spacing for mobile */
+}
+
+.category-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white-text);
+    transform: translateY(-6px) scale(1.03); /* More pronounced lift and scale */
+    box-shadow: var(--box-shadow-md) rgba(var(--primary-color-rgb), 0.3);
+    border-color: var(--primary-color);
+}
+
+/* Cart & Checkout Specifics */
+.list-group-item {
+    padding: 1.2rem 1.5rem; /* More padding */
+    background-color: var(--white-text);
+    border: 1px solid var(--border-color);
+    margin-bottom: -1px; /* Overlap borders */
+    font-size: 1.05rem;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: var(--border-radius-md);
+    border-top-right-radius: var(--border-radius-md);
+}
+
+.list-group-item:last-child {
+    margin-bottom: 0;
+    border-bottom-right-radius: var(--border-radius-md);
+    border-bottom-left-radius: var(--border-radius-md);
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.45em 0.75em; /* Slightly larger badge */
+    font-size: 0.8em;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--white-text);
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: var(--border-radius-pill); /* Pill shape badge */
+}
+
+.badge.bg-primary { background-color: var(--primary-color) !important; }
+
+/* Pagination */
+.pagination {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: var(--border-radius-md);
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.page-item {
+    margin: 0 0.3rem; /* Space between items */
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    color: var(--primary-color);
+    text-decoration: none;
+    background-color: var(--white-text);
+    border: 1px solid var(--border-color);
+    padding: 0.75rem 1.1rem; /* More padding */
+    border-radius: var(--border-radius-md); /* Consistent rounding */
+    transition: all var(--transition-fast) ease;
+}
+
+.page-link:hover {
+    z-index: 2;
+    color: var(--white-text);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: var(--box-shadow-sm) rgba(var(--primary-color-rgb),0.2);
+    transform: translateY(-2px);
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: var(--white-text);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: var(--box-shadow-md) rgba(var(--primary-color-rgb),0.3);
+}
+
+.page-item.disabled .page-link {
+    color: var(--light-text);
+    pointer-events: none;
+    background-color: var(--medium-bg); /* Lighter disabled background */
+    border-color: var(--border-color);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-text); /* Darker footer for strong contrast */
+    color: #b0b0b0; /* Lighter grey text for dark background */
+    padding: 3.5rem 0; /* More padding */
+    border-top: 4px solid var(--primary-color); /* Accent top border */
+    text-align: center;
+    margin-top: 6rem; /* More margin to push footer down */
+}
+
+.footer p {
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+}
+
+.footer a {
+    color: #d0d0d0; /* Lighter link color for readability */
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Image placeholders for About Us and Contact pages */
+.img-placeholder {
+    background-color: var(--medium-bg);
+    color: #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border-radius: var(--border-radius-lg);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    /* These specific hero-slide-content rules might need adjustment based on final HTML class names */
+    /* .hero-section .hero-slide-content h1 { font-size: 3.2rem; } */
+    /* .hero-section .hero-slide-content p { font-size: 1.2rem; } */
+    .cta-section h3 { font-size: 2.2rem; }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    .hero-section { height: 400px;} /* Adjusted height for smaller screens */
+    /* These specific hero-slide-content rules might need adjustment based on final HTML class names */
+    /* .hero-section .hero-slide-content h1 { font-size: 2.5rem; } */ /* Further adjust */
+    /* .hero-section .hero-slide-content p { font-size: 1.1rem; } */
+    .cta-section { padding: 2.5rem; }
+    .cta-section h3 { font-size: 2rem; }
+    .btn { padding: 0.6rem 1.4rem; font-size: 0.95rem; }
+    .card { padding: 1.5rem; margin-bottom: 1.8rem; }
+    .product-card { padding: 1.2rem; } /* Override card padding if needed */
+    .product-card img { height: 180px; }
+    .product-price { font-size: 1.4rem; }
+    .footer { padding: 2rem 0; margin-top: 4rem;}
+    .category-btn { padding: 1.5rem 1rem; font-size: 1rem;}
+}
+
+@media (max-width: 576px) {
+    body { padding-top: 80px; } /* Adjust for potentially smaller navbar on mobile */
+    .container { padding: 0 15px; } /* Original was 10px */
+    .row { margin: 0 -10px; } /* Keep if specific column padding is used */
+    [class*="col-"] { padding: 0 10px; } /* Keep if specific column padding is used */
+    /* .col-sm-12 { width: 100%; } /* This is default Bootstrap-like behavior */
+    .hero-section { height: 350px; }
+    /* These specific hero-slide-content rules might need adjustment based on final HTML class names */
+    /* .hero-section .hero-slide-content h1 { font-size: 2rem; } */
+    /* .hero-section .hero-slide-content p { font-size: 1rem; } */
+    .cta-section { padding: 2rem 1.5rem; }
+    .cta-section h3 { font-size: 1.8rem; }
+    .product-card img { height: 160px; }
+    .product-price { font-size: 1.3rem; }
+    .footer { padding: 1.8rem 0; }
+    .navbar-brand { font-size: 1.6rem; }
+    .nav-item { margin-left: 0; } /* Nav items stack, no left margin needed */
+    .btn { padding: 0.55rem 1.2rem; font-size: 0.9rem; }
+}
+
+
+
+
+/* Styles for the two-image hover effect in specific Product Cards */
+.image-hover-container {
+    position: relative;
+    width: 100%; /* Ensures it takes the width of its column space in the card */
+    height: 220px; /* This should match the height of .product-card img from your existing styles for consistency */
+    margin-left: auto;  /* Centering the container if its parent is text-align:center */
+    margin-right: auto;
+    margin-bottom: 1.2rem; /* Matches original .product-card img margin-bottom */
+    overflow: hidden;
+    border-radius: var(--border-radius-md); /* Matches default image border radius */
+}
+
+.image-hover-container .card-img-top,
+.image-hover-container .card-img-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container space well */
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    backface-visibility: hidden; /* Can help with smoother transitions */
+}
+
+/* Initial state: First image visible, second image hidden */
+.image-hover-container .card-img-top {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    z-index: 2; /* On top initially */
+}
+
+.image-hover-container .card-img-bottom {
+    opacity: 0;
+    transform: scale(1.1) rotate(3deg); /* Start slightly larger and rotated for entry effect */
+    z-index: 1; /* Beneath the first image */
+}
+
+/* Hover state: When the product card (or image-hover-container) is hovered */
+.product-card:hover .image-hover-container .card-img-top {
+    opacity: 0;
+    transform: scale(0.9) rotate(-3deg); /* First image scales down and rotates out */
+}
+
+.product-card:hover .image-hover-container .card-img-bottom {
+    opacity: 1;
+    transform: scale(1) rotate(0deg); /* Second image scales to normal size and straightens */
+    z-index: 2; /* Bring to top */
+}
+
+/*
+OPTIONAL: If the generic .product-card::after effect (which changes the card background)
+interferes or is not desired for cards using this .image-hover-container,
+you can add a class like "has-image-swap" to the .product-card div in index.html:
+<div class="card product-card has-image-swap">
+
+And then add this CSS:
+*/
+/*
+.product-card.has-image-swap::after {
+    display: none; // This will hide the generic card background hover effect
+}
+*/
+
+/* Hero Section Styling (Ensuring these are present and correct for the slider) */
+.hero-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Hide overflowing slides */
+    height: 500px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-text); /* Text color for hero content */
+    text-align: center;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-background .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-in-out; /* Fade transition */
+    display: flex; /* To center content within the slide */
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-background .slide.active {
+    opacity: 1; /* Active slide is visible */
+}
+
+.slide-content {
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay for text readability */
+    padding: 1rem; /* Increased padding */
+    border-radius: 3px;
+    max-width: 95%; /* Increased width */
+    z-index: 5; /* Ensure content is above background but below navigation */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10; /* Ensure this is above slides and their content */
+}
+
+.hero-navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 5; /* Above slides, below hero-content */
+    padding: 0 20px;
+}
+
+.slide-nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--white-text);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.slide-nav:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}

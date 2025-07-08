@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to MyStore | E-commerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MyStore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart <span class="badge bg-primary rounded-pill">0</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-background">
+            <div class="slide active" style="background-image: url(images/wal.jpg);">
+                <div class="slide-content">
+                    <h1>Discover Our Latest Collection</h1><br>
+                    <p>Shop the best deals on electronics, fashion, and home essentials.</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url(images/wal2.jpg);">
+                <div class="slide-content">
+                    <h1>Exclusive Online Offers</h1><br>
+                    <p>Don't miss out on limited-time discounts!</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url(images/wal3.jpg);">
+                <div class="slide-content">
+                    <h1>Your One-Stop Shop</h1><br>
+                    <p>Browse a wide range of products for every need.</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-navigation">
+            <button class="slide-nav prev" aria-label="Previous slide">&#10094;</button>
+            <button class="slide-nav next" aria-label="Next slide">&#10095;</button>
+        </div>
+        <div class="container hero-content">
+            <a href="products.html" class="btn btn-primary btn-lg">Shop Now</a>
+        </div>
+    </header>
+
+    <main class="container mt-5">
+        <section id="featured-products" class="mb-5">
+            <h2 class="text-center mb-4">Featured Products</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <div class="image-hover-container">
+                            <img src="https://via.placeholder.com/300x200?text=Product+1" class="card-img-top" alt="Awesome Gadget">
+                            </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Awesome Gadget</h5>
+                            <p class="card-text">A truly awesome gadget for your daily needs.</p><br>
+                            <p class="card-text"><strong>1050 BDT</strong></p>
+                            <a href="product-detail.html?id=1" class="btn btn-outline-secondary btn-sm">View Details</a>
+                            <a href="form.html" class="btn btn-primary btn-sm">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="https://via.placeholder.com/300x200?text=Product+2" class="card-img-top" alt="Stylish Wearable">
+                        <div class="card-body">
+                            <h5 class="card-title">Stylish Wearable</h5>
+                            <p class="card-text">Look cool and stay connected with this wearable.</p>
+                            <p class="card-text"><strong>$149.50</strong></p>
+                            <a href="product-detail.html?id=2" class="btn btn-outline-secondary btn-sm">View Details</a>
+                            <button class="btn btn-primary btn-sm add-to-cart-btn" data-product-id="2" data-product-name="Stylish Wearable">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="https://via.placeholder.com/300x200?text=Product+3" class="card-img-top" alt="Home Essential">
+                        <div class="card-body">
+                            <h5 class="card-title">Home Essential</h5>
+                            <p class="card-text">Make your home life easier with this essential item.</p>
+                            <p class="card-text"><strong>$49.00</strong></p>
+                            <a href="product-detail.html?id=3" class="btn btn-outline-secondary btn-sm">View Details</a>
+                            <button class="btn btn-primary btn-sm add-to-cart-btn" data-product-id="3" data-product-name="Home Essential">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories" class="mb-5">
+            <h2 class="text-center mb-4">Shop by Category</h2>
+            <div class="row text-center">
+                <div class="col-md-3"><a href="products.html?category=electronics" class="btn btn-outline-dark d-block p-3">Electronics</a></div>
+                <div class="col-md-3"><a href="products.html?category=fashion" class="btn btn-outline-dark d-block p-3">Fashion</a></div>
+                <div class="col-md-3"><a href="products.html?category=home" class="btn btn-outline-dark d-block p-3">Home & Garden</a></div>
+                <div class="col-md-3"><a href="products.html?category=books" class="btn btn-outline-dark d-block p-3">Books</a></div>
+            </div>
+        </section>
+
+        <section class="text-center bg-light p-5 rounded mb-5">
+            <h3>Don't Miss Out!</h3>
+            <p>Subscribe to our newsletter for exclusive deals and updates.</p>
+            <form class="d-flex justify-content-center">
+                <input type="email" class="form-control w-auto me-2" placeholder="Enter your email">
+                <button type="submit" class="btn btn-success">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer bg-light py-4 mt-auto">
+        <div class="container text-center">
+            <p>© 2023 My E-commerce Store. All Rights Reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
